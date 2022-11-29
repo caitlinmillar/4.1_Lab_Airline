@@ -1,0 +1,45 @@
+@startuml
+class Runner{
+scanner : Scanner
+passengerID : random
+Sout(enter name)
+Sout(assign ID)
+Sout(select from menu)
+Sout(Destinations)
+}
+
+class Passenger{
+name : String
+contact : int
+id : int
+flight : ArrayList
++bookFlight()
++cancelFlight()
++get/set Flight()
+}
+
+class Flight{
+flightNumber : int
+destination : enum
+passengers : ArrayList
++addPassenger()
++removePassenger()
++get/set FlightNumber()
++get/set Destination()
+}
+
+Runner <|-- Passenger
+Runner <|-- Flight
+
+
+
+enum Destination{
+    PARIS,
+    ROME,
+    BARCELONA,
+    NEWYORK,
+    FRANKFURT,
+    OSLO,
+}
+
+@enduml

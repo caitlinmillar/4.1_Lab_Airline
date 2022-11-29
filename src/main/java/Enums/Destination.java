@@ -7,6 +7,6 @@ public enum Destination {
     NEWYORK,
     FRANKFURT,
     OSLO,
-
 }
+
 

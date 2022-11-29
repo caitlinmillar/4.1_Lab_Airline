@@ -3,16 +3,14 @@ import Enums.Destination;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static Enums.Destination.PARIS;
+import static Enums.Destination.*;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class FlightTest {
 
     Flight flight;
     Passenger passenger1;
-    Passenger passenger2;
-    Passenger passenger3;
 
 
     @BeforeEach
@@ -31,6 +29,12 @@ public class FlightTest {
     public void canAddPassenger(){
         flight.addPassenger(passenger1);
         assertEquals(1, flight.countPassengers());
+    }
+
+
+    @Test
+    public void canGetDestination(){
+        flight.getDestination().add(0, PARIS);
     }
 
 
